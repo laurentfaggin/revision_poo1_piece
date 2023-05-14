@@ -7,6 +7,6 @@ namespace revision_poo1_piece
 {
     public class Piece
     {
-       int x;
+        
     }
 }
