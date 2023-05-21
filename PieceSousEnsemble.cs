@@ -7,9 +7,20 @@ namespace revision_poo1_piece
 {
     public class PieceSousEnsemble: Piece
     {
+        private int m_quantite_piece_sous_ensemble;
         private List<Piece>m_liste_pieces = new List<Piece>();
         public PieceSousEnsemble(string p_description, int p_numero_serie, string p_reference): base(p_description, p_numero_serie, p_reference)
         {
+        }
+
+        public int GetQuantitePeceSousEnsemble
+        {
+            get {return this.m_quantite_piece_sous_ensemble;}
+        }
+
+        public int SetQuantitePieceSousEnsemble
+        {
+            set {this.m_quantite_piece_sous_ensemble = value;}
         }
         public List<Piece>  GetListe
         {
@@ -29,7 +40,7 @@ namespace revision_poo1_piece
             }
             else
             {
-                p_piece.SetQuantite += p_piece.GetQuantite;
+                this.m_quantite_piece_sous_ensemble += p_piece.GetQuantite;
             }
         }
 
