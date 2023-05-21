@@ -1,0 +1,15 @@
+C:\C#\revision_poo1_piece\bin\Debug\net7.0\revision_poo1_piece.exe
+C:\C#\revision_poo1_piece\bin\Debug\net7.0\revision_poo1_piece.deps.json
+C:\C#\revision_poo1_piece\bin\Debug\net7.0\revision_poo1_piece.runtimeconfig.json
+C:\C#\revision_poo1_piece\bin\Debug\net7.0\revision_poo1_piece.dll
+C:\C#\revision_poo1_piece\bin\Debug\net7.0\revision_poo1_piece.pdb
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.csproj.AssemblyReference.cache
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.AssemblyInfoInputs.cache
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.AssemblyInfo.cs
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.csproj.CoreCompileInputs.cache
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.dll
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\refint\revision_poo1_piece.dll
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.pdb
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\revision_poo1_piece.genruntimeconfig.cache
+C:\C#\revision_poo1_piece\obj\Debug\net7.0\ref\revision_poo1_piece.dll

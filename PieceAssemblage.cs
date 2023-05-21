@@ -7,6 +7,29 @@ namespace revision_poo1_piece
 {
     public class PieceAssemblage: Piece
     {
+        public PieceAssemblage(string p_description, int p_numero_serie, string p_reference, int p_quantite): base(p_description, p_numero_serie, p_reference)
+        {
+            this.SetQuantite = p_quantite;
+        }
         
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || !(obj is PieceAssemblage))
+            {
+                return false;
+            }
+            return (this.GetDescription == ((PieceAssemblage)obj).GetDescription && this.GetNumeroSerie == ((PieceAssemblage)obj).GetNumeroSerie
+                                                && this.GetReference == ((PieceAssemblage)obj).GetReference && this.GetType() == ((PieceAssemblage)obj).GetType());
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(this.GetDescription, this.GetReference);
+        }
+
+        public override string ToString()
+        {
+            return $"Piece: {this.GetDescription}  Numero de serie: {this.GetNumeroSerie}  Reference: {this.GetReference}";
+        }
     }
 }
