@@ -7,21 +7,12 @@ namespace revision_poo1_piece
 {
     public class PieceSousEnsemble: Piece
     {
-        private int m_quantite_piece_sous_ensemble;
         private List<Piece>m_liste_pieces = new List<Piece>();
         public PieceSousEnsemble(string p_description, int p_numero_serie, string p_reference): base(p_description, p_numero_serie, p_reference)
         {
         }
 
-        public int GetQuantitePeceSousEnsemble
-        {
-            get {return this.m_quantite_piece_sous_ensemble;}
-        }
 
-        public int SetQuantitePieceSousEnsemble
-        {
-            set {this.m_quantite_piece_sous_ensemble = value;}
-        }
         public List<Piece>  GetListe
         {
             get { return this.m_liste_pieces; }
@@ -32,24 +23,17 @@ namespace revision_poo1_piece
             set { this.m_liste_pieces = value; }
         }
 
-        public void AjouterPieceDansSousEnsemble(Piece p_piece)
+        public override void AjouterPiece(Piece p_piece)
         {
-            if (!this.m_liste_pieces.Contains(p_piece))
-            {
-                this.m_liste_pieces.Add(p_piece);
-            }
-            else
-            {
-                this.m_quantite_piece_sous_ensemble += p_piece.GetQuantite;
-            }
+                this.m_liste_pieces.Add(p_piece);     
         }
 
-        public string Bom_Sous_Ensemble()
+        public override string Bom()
         {
             string bom ="";
             foreach(Piece p in this.GetListe)
             {                
-                bom += $"{p.GetDescription, -30} {p.GetReference, -25} {p.GetQuantite, -10}\n";   
+                bom += $"{p.GetDescription, -30} {p.GetReference, -15}\n";   
             }
 
             return bom;

@@ -7,9 +7,8 @@ namespace revision_poo1_piece
 {
     public class PieceAssemblage: Piece
     {
-        public PieceAssemblage(string p_description, int p_numero_serie, string p_reference, int p_quantite): base(p_description, p_numero_serie, p_reference)
+        public PieceAssemblage(string p_description, int p_numero_serie, string p_reference): base(p_description, p_numero_serie, p_reference)
         {
-            this.SetQuantite = p_quantite;
         }
         
         public override bool Equals(object? obj)

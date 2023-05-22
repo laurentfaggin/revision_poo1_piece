@@ -1,0 +1,20 @@
+@startuml diagramme
+class Piece
+{
+    -m_description:string
+    -m_numero_serie:int
+    -m_reference:string
+    -m_quantite:int
+    -m_liste_piece:List<PieceSousEnsemble>
+    +GetDe
+}
+class PieceAssemblage
+class PieceMoulee
+class PieceSousEnsemble
+class PieceUsinee
+
+
+
+Piece <-- PieceAssemblage
+
+@enduml

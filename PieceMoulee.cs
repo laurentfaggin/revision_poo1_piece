@@ -7,9 +7,8 @@ namespace revision_poo1_piece
 {
     public class PieceMoulee: Piece
     {
-        public PieceMoulee(string p_description, int p_numero_serie, string p_reference, int p_quantite): base(p_description, p_numero_serie, p_reference)
+        public PieceMoulee(string p_description, int p_numero_serie, string p_reference): base(p_description, p_numero_serie, p_reference)
         {
-            this.SetQuantite = p_quantite;
         }
 
         

@@ -10,8 +10,7 @@ namespace revision_poo1_piece
         private string m_description;
         private int m_numero_serie;
         private string m_reference;
-        private int m_quantite;
-        private List<PieceSousEnsemble> m_liste_Piece = new List<PieceSousEnsemble>();
+        private List<Piece> m_liste_Piece = new List<Piece>();
         public string GetDescription
         {
             get { return this.m_description; }
@@ -42,21 +41,11 @@ namespace revision_poo1_piece
             set { this.m_reference = value; }
         }
 
-        public int GetQuantite
-        {
-            get {return this.m_quantite;}
-        }
-
-        public int SetQuantite
-        {
-            get { return this.m_quantite; }
-            set {this.m_quantite = value;}
-        }
-        public List<PieceSousEnsemble> GetListePiece
+        public List<Piece> GetListePiece
         {
             get {return this.m_liste_Piece;}
         }
-        public List<PieceSousEnsemble> SetListePiece
+        public List<Piece> SetListePiece
         {
             set {this.m_liste_Piece=value;}
         }
@@ -65,21 +54,22 @@ namespace revision_poo1_piece
             this.m_description = p_description;
             this.m_numero_serie = p_numero_serie;
             this.m_reference = p_reference;
-            this.m_quantite = 1;
         }
 
-        public string Bom()
+        public virtual string Bom()
         {
-            string bom = string.Format("{0, -30} {1, -25} {2, -10}\n", "Description", "Reference", "Quantite"); 
-            bom += string.Format("{0, -30} {1, -25} {2, -10}\n", this.m_description, this.m_reference, this.m_quantite);
-            foreach (PieceSousEnsemble pse in this.m_liste_Piece)
+            string bom = string.Format("{0, -30} {1, -15} {2, -10}\n", "Description", "Reference", "Quantite"); 
+            bom += string.Format("{0, -30} {1, -15} {2, -10}\n", this.m_description, this.m_reference);
+            foreach (Piece pse in this.m_liste_Piece)
             {
-                bom += pse.Bom_Sous_Ensemble();
+                bom += pse.Bom();
             }
             return bom;
         }
 
-        public void AjouterSousEnsembleDansPiece(PieceSousEnsemble p_sousEnsemble)
+     
+
+        public virtual void AjouterPiece(Piece p_sousEnsemble)
         {
             this.m_liste_Piece.Add(p_sousEnsemble);
         }
