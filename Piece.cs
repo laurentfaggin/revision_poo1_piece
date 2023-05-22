@@ -58,7 +58,7 @@ namespace revision_poo1_piece
 
         public virtual string Bom()
         {
-            string bom = string.Format("{0, -30} {1, -15} {2, -10}\n", "Description", "Reference", "Quantite"); 
+            string bom = string.Format("{0, -30} {1, -15} {2, -10}\n", "Description", "Reference"); 
             bom += string.Format("{0, -30} {1, -15} {2, -10}\n", this.m_description, this.m_reference);
             foreach (Piece pse in this.m_liste_Piece)
             {

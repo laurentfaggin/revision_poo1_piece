@@ -49,7 +49,7 @@ namespace revision_poo1_piece
             echangeur.AjouterPiece(fond);
             echangeur.AjouterPiece(piquage);
 
-            Console.WriteLine(echangeur.ToString());
+            //Console.WriteLine(echangeur.ToString());
             Console.WriteLine(echangeur.Bom());
         }
     }
