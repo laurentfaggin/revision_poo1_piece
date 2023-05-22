@@ -49,11 +49,11 @@ namespace revision_poo1_piece
         {
             set {this.m_liste_Piece=value;}
         }
-        public Piece(string p_description, int p_numero_serie, string p_reference)
+        public Piece(string p_description, string p_reference, int p_numero_serie)
         {
             this.m_description = p_description;
-            this.m_numero_serie = p_numero_serie;
             this.m_reference = p_reference;
+            this.m_numero_serie = p_numero_serie;
         }
 
         public virtual string Bom()
@@ -92,12 +92,12 @@ namespace revision_poo1_piece
         public override string ToString()
         {
             string message="";
-            foreach (PieceSousEnsemble p in this.m_liste_Piece)
+            foreach (Piece p in this.m_liste_Piece)
             {
                 message +=$"  {p.ToString()}\n"; 
             }
             
-            return $"Piece: {this.m_description} Numero de serie: {this.m_numero_serie} Reference: {this.m_reference}\n{message}\n";
+            return $"Piece: {this.m_description} part - #{this.m_reference} numero serie: #{this.m_numero_serie}\n{message}";
         }
     }
 }

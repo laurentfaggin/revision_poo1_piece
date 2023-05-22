@@ -8,7 +8,7 @@ namespace revision_poo1_piece
     public class PieceSousEnsemble: Piece
     {
         private List<Piece>m_liste_pieces = new List<Piece>();
-        public PieceSousEnsemble(string p_description, int p_numero_serie, string p_reference): base(p_description, p_numero_serie, p_reference)
+        public PieceSousEnsemble(string p_description, string p_reference, int p_numero_serie): base(p_description, p_reference, p_numero_serie)
         {
         }
 
@@ -56,7 +56,7 @@ namespace revision_poo1_piece
 
         public override string ToString()
         {
-            string message =$"Piece: {this.GetDescription}  Numero de serie: {this.GetNumeroSerie}  Reference: {this.GetReference}\n";
+            string message =$"Piece: {this.GetDescription}   part - {this.GetReference},  numero serie: #{this.GetNumeroSerie}\n";
             foreach (Piece p in this.m_liste_pieces)
             {
                 message += $"    {p.ToString()}\n";
