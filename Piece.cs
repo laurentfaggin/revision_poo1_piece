@@ -58,8 +58,8 @@ namespace revision_poo1_piece
 
         public virtual string Bom()
         {
-            string bom = string.Format("{0, -30} {1, -15} {2, -10}\n", "Description", "Reference"); 
-            bom += string.Format("{0, -30} {1, -15} {2, -10}\n", this.m_description, this.m_reference);
+            string bom = string.Format($"{"Description", -30} {"Reference", -15}\n");
+            bom += string.Format($"{this.m_description, -30} {this.m_reference, -15}\n");
             foreach (Piece pse in this.m_liste_Piece)
             {
                 bom += pse.Bom();
