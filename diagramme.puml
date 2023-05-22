@@ -5,16 +5,26 @@ class Piece
     -m_numero_serie:int
     -m_reference:string
     -m_quantite:int
-    -m_liste_piece:List<PieceSousEnsemble>
-    +GetDe
+    -m_liste_piece:List<Piece>
+    +GetDescription:string
+    +SetDescription
+    +GetNumeroSerie:int
+    +SetNumeroSerie
+    +GetReference:string
+    +SetReference
+    +GetListePiece:List<Piece>
+    +SetListePiece
+    +Piece(string p_description, int p_numero_serie, string p_reference)
+    
 }
 class PieceAssemblage
 class PieceMoulee
 class PieceSousEnsemble
 class PieceUsinee
 
-
-
 Piece <-- PieceAssemblage
+Piece <-- PieceMoulee
+Piece <-- PieceUsinee
+Piece <-- PieceSousEnsemble
 
 @enduml
