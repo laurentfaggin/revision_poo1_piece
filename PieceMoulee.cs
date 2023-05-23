@@ -11,7 +11,6 @@ namespace revision_poo1_piece
         {
         }
 
-        
         public override bool Equals(object? obj)
         {
             if (obj == null || !(obj is PieceMoulee))

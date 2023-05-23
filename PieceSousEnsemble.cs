@@ -8,6 +8,8 @@ namespace revision_poo1_piece
     public class PieceSousEnsemble: Piece
     {
         private List<Piece>m_liste_pieces = new List<Piece>();
+        
+        
         public PieceSousEnsemble(string p_description, string p_reference, int p_numero_serie): base(p_description, p_reference, p_numero_serie)
         {
         }
@@ -28,12 +30,19 @@ namespace revision_poo1_piece
                 this.m_liste_pieces.Add(p_piece);     
         }
 
+
         public override string Bom()
         {
             string bom ="";
             foreach(Piece p in this.GetListe)
-            {                
-                bom += $"{p.GetDescription, -30} {p.GetReference, -15}\n";   
+            {
+                for (int i = 0; i < GetListe.Count; i++){
+                    if(p.GetDescription == GetListe[i].GetDescription)
+                    {
+                        p.Count ++;
+                    }
+                }                
+                bom += $"{p.GetDescription, -30} {p.GetReference, -15} {p.Count, -10}\n";   
             }
 
             return bom;
