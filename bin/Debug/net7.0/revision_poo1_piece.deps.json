@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "revision_poo1_piece/1.0.0": {
+        "runtime": {
+          "revision_poo1_piece.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "revision_poo1_piece/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
