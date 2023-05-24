@@ -17,18 +17,18 @@ namespace revision_poo1_piece
             {
                 return false;
             }
-            return (this.GetDescription == ((PieceMoulee)obj).GetDescription && this.GetNumeroSerie == ((PieceMoulee)obj).GetNumeroSerie
-                                                && this.GetReference == ((PieceMoulee)obj).GetReference && this.GetType() == ((PieceMoulee)obj).GetType());
+            return (this.Description == ((PieceMoulee)obj).Description && this.NumeroSerie == ((PieceMoulee)obj).NumeroSerie
+                                                && this.Reference == ((PieceMoulee)obj).Reference && this.GetType() == ((PieceMoulee)obj).GetType());
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(this.GetDescription, this.GetReference);
+            return HashCode.Combine(this.Description, this.Reference);
         }
 
         public override string ToString()
         {
-            return $"Piece: {this.GetDescription}   part - {this.GetReference},  numero serie: #{this.GetNumeroSerie}";
+            return $"Piece: {this.Description}   part - {this.Reference},  numero serie: #{this.NumeroSerie}";
         }
 
         

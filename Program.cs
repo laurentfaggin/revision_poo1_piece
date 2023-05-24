@@ -7,7 +7,7 @@ namespace revision_poo1_piece
         public static void Main(string[] args)
         {
             Piece valve = new Piece ("Valve a eau", "#0481", 1234);
-            Piece basePiece = new PieceSousEnsemble ("basePiece", "#0474", 1387);
+            Piece basePiece = new PieceSousEnsemble ("base", "#0474", 1387);
             Piece systActivation = new PieceSousEnsemble ("Systeme d'activation", "#0574", 1887);
             Piece pin = new PieceUsinee ("Pin", "#0974", 1687);
             Piece plug = new PieceUsinee ("Plug", "#0964", 1657);
@@ -15,6 +15,7 @@ namespace revision_poo1_piece
             Piece couvercleMonobloc = new PieceUsinee("Couvercle Monobloc", "#9874", 1257);
             Piece vis = new PieceAssemblage ("Vis M8", "#3774", 8757);
             Piece couvercleLateral = new PieceSousEnsemble("Couvercle Lateral", "#0374", 1987);
+            Piece couvercleLateral2 = new PieceSousEnsemble("Couvercle Lateral", "#0374", 1987);
 
            
 
@@ -27,18 +28,22 @@ namespace revision_poo1_piece
    
             
             couvercleLateral.AjouterPiece(couvercleMonobloc);
+            couvercleLateral2.AjouterPiece(couvercleMonobloc);
             for (int j = 0; j < 4; j++)
             {
                 couvercleLateral.AjouterPiece(vis);
+                couvercleLateral2.AjouterPiece(vis);
             }
             
             valve.AjouterPiece(couvercleLateral);
-            valve.AjouterPiece(couvercleLateral);
+            valve.AjouterPiece(couvercleLateral2);
             
  
 
-            //Console.WriteLine (valve.ToString());
+            Console.WriteLine (valve.ToString());
+            valve.RemplirListeAplatie();
             Console.WriteLine (valve.Bom());
+          
         }
     }
 }

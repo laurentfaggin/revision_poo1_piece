@@ -22,9 +22,9 @@ class PieceMoulee
 class PieceSousEnsemble
 class PieceUsinee
 
-Piece <-- PieceAssemblage
-Piece <-- PieceMoulee
-Piece <-- PieceUsinee
-Piece <-- PieceSousEnsemble
+Piece <|-- PieceAssemblage
+Piece <|-- PieceMoulee
+Piece <|-- PieceUsinee
+Piece <|-- PieceSousEnsemble
 
 @enduml
