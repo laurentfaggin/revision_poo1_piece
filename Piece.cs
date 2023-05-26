@@ -88,13 +88,12 @@ namespace revision_poo1_piece
             {
                 return false;
             }
-            return (this.Description == ((Piece)obj).Description && this.NumeroSerie == ((Piece)obj).NumeroSerie
-                                                && this.Reference == ((Piece)obj).Reference && this.GetType() == ((Piece)obj).GetType());
+            return this.GetHashCode() == obj.GetHashCode();
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(this.m_description, this.m_reference);
+            return HashCode.Combine(this.m_description, this.m_reference, this.m_numero_serie);
         }
 
         public override string ToString()
