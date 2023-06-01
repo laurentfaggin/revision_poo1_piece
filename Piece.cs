@@ -36,14 +36,13 @@ namespace revision_poo1_piece
         }
         public List<Piece> ListeAplatie
         {
-            get {return new List<Piece>();}
+            get {return new List<Piece>(){this};}
         }
         public Piece(string p_description, string p_reference, int p_numero_serie)
         {
             this.m_description = p_description;
             this.m_reference = p_reference;
             this.m_numero_serie = p_numero_serie;
-            this.m_liste_aplatie = new List<Piece>(){this};
         }
         public virtual void RemplirListeAplatie()
         {
