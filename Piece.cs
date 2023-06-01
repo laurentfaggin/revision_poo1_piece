@@ -11,7 +11,7 @@ namespace revision_poo1_piece
         private string m_description;
         private int m_numero_serie;
         private string m_reference;
-        private List<Piece> m_liste_Piece = new List<Piece>();
+        private List<Piece> m_liste_Piece;
         private List<Piece> m_liste_aplatie;
         protected int count;
         public string Description
@@ -36,8 +36,7 @@ namespace revision_poo1_piece
         }
         public List<Piece> ListeAplatie
         {
-            get {return m_liste_aplatie;}
-            private set {m_liste_aplatie = value;}
+            get {return new List<Piece>();}
         }
         public Piece(string p_description, string p_reference, int p_numero_serie)
         {
