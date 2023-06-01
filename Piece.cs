@@ -43,6 +43,8 @@ namespace revision_poo1_piece
             this.m_description = p_description;
             this.m_reference = p_reference;
             this.m_numero_serie = p_numero_serie;
+            this.m_liste_Piece = new List<Piece>();
+            this.m_liste_aplatie = new List<Piece>();
         }
         public virtual void RemplirListeAplatie()
         {
