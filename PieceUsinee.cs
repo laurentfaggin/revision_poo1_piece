@@ -12,21 +12,7 @@ namespace revision_poo1_piece
         {     
         }
 
-        public override bool Equals(object? obj)
-        {
-            if (obj == null || !(obj is PieceUsinee))
-            {
-                return false;
-            }
-            return (this.Description == ((PieceUsinee)obj).Description && this.NumeroSerie == ((PieceUsinee)obj).NumeroSerie
-                                                && this.Reference == ((PieceUsinee)obj).Reference && this.GetType() == ((PieceUsinee)obj).GetType());
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(this.Description, this.Reference);
-        }
-
+  
         public override string ToString()
         {
             return $"Piece: {this.Description}   part - {this.Reference},  numero serie: #{this.NumeroSerie}";

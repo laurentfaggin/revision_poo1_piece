@@ -49,22 +49,7 @@ namespace revision_poo1_piece
             return affiche;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(this.Description, this.Reference);
-        }
-        
-        public override bool Equals(object? obj)
-        {
-            if (obj == null || !(obj is PieceSousEnsemble))
-            {
-                return false;
-            }
-            return (this.Description == ((PieceSousEnsemble)obj).Description && this.NumeroSerie == ((PieceSousEnsemble)obj).NumeroSerie
-                                                && this.Reference == ((PieceSousEnsemble)obj).Reference && this.GetType() == ((PieceSousEnsemble)obj).GetType());
-        }
-
-        public override string ToString()
+           public override string ToString()
         {
             string message =$"Piece: {this.Description}   part - {this.Reference},  numero serie: #{this.NumeroSerie}\n";
             foreach (Piece p in this.m_liste_pieces)

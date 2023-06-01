@@ -11,7 +11,7 @@ namespace revision_poo1_piece
         private string m_description;
         private int m_numero_serie;
         private string m_reference;
-        private List<Piece> m_liste_Piece = new List<Piece>();
+        private List<Piece> m_liste_Piece;
         private List<Piece> m_liste_aplatie;
         protected int count;
         public string Description
@@ -36,15 +36,15 @@ namespace revision_poo1_piece
         }
         public List<Piece> ListeAplatie
         {
-            get {return m_liste_aplatie;}
-            private set {m_liste_aplatie = value;}
+            get {return new List<Piece>(){this};}
         }
         public Piece(string p_description, string p_reference, int p_numero_serie)
         {
             this.m_description = p_description;
             this.m_reference = p_reference;
             this.m_numero_serie = p_numero_serie;
-            this.m_liste_aplatie = new List<Piece>(){this};
+            this.m_liste_Piece = new List<Piece>();
+            this.m_liste_aplatie = new List<Piece>();
         }
         public virtual void RemplirListeAplatie()
         {
@@ -88,13 +88,12 @@ namespace revision_poo1_piece
             {
                 return false;
             }
-            return (this.Description == ((Piece)obj).Description && this.NumeroSerie == ((Piece)obj).NumeroSerie
-                                                && this.Reference == ((Piece)obj).Reference && this.GetType() == ((Piece)obj).GetType());
+            return this.GetHashCode() == obj.GetHashCode();
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(this.m_description, this.m_reference);
+            return HashCode.Combine(this.m_description, this.m_reference, this.m_numero_serie);
         }
 
         public override string ToString()
