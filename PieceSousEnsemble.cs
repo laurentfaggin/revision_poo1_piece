@@ -36,7 +36,7 @@ namespace revision_poo1_piece
         public override void RemplirListeAplatie()
         {
             base.RemplirListeAplatie();
-            ListeAplatie.AddRange(m_liste_pieces);
+            m_liste_composants.AddRange(m_liste_pieces);
         }
 
         public override string AfficheListeAplatie()
